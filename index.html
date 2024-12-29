@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Tutorial</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --text-color: #1f2937;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .top-bar {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .top-bar a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      transition: all 0.2s;
+    }
+
+    .top-bar a:hover {
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 7rem 1rem 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 3rem;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .section {
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+    }
+
+    .section img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+
+    .section a {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .section a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        padding: 0.75rem;
+        gap: 1rem;
+      }
+
+      .top-bar a {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+      }
+
+      .content {
+        padding-top: 5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+
+      .section img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-bar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Tutorials</a>
+    <a href="#">Leetcode</a>
+  </nav>
+
+  <main class="content">
+    <h1>Coding Tutorial Menu</h1>
+    
+    <div class="menu-container">
+      <div class="section">
+        <img src="/api/placeholder/400/400" alt="Basic Programming Concepts">
+        <h2>Basic Info</h2>
+        <p>Start learning the fundamentals of programming, data structures, algorithms, and more.</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="section">
+        <img src="/api/placeholder/400/400" alt="Visual Learning Aids">
+        <h2>Graphic Illustrations</h2>
+        <p>Learn complex topics through visual aids and graphics to better understand coding principles.</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="section">
+        <img src="/api/placeholder/400/400" alt="Coding Problems">
+        <h2>Leetcode Solutions</h2>
+        <p>Solve coding problems from Leetcode and other platforms to practice and improve your coding skills.</p>
+        <a href="#">Explore</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
